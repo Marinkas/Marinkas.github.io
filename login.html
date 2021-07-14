@@ -1,0 +1,57 @@
+<!DOCTYPE html>     
+<html>
+	<head>
+		<title>Login To Your Account</title>
+		<style>
+			body {	
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-family: sans-serif;
+			}
+			
+			form {
+				display: grid;
+			}
+			
+			input {
+				height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Login To Your Account</h1>
+
+		<form id="log-form" method="POST" accept-charset="utf-8">
+			<input type="text" id="name" placeholder="Username"><br>
+			<input type="password" id="password" placeholder="Password"><br>
+			<input type="submit" value="Login">
+		</form>
+
+		<script>
+			const form = document.getElementById('log-form')
+			form.addEventListener('submit', registerUser)
+			
+			async function registerUser(event) {
+				event.preventDefault()
+				const name = document.getElementById('name').value
+				const password = document.getElementById('password').value
+				
+				const result = await fetch('https://script.google.com/macros/s/AKfycby7w7wToxktqMomjsn9W8bP1wuVK6NDsOB2MOKd4b6IorLVrV_1/exec', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: `act=login&name=${name}&password=${password}`,
+				}).then((res) => res.json())
+
+				if (result.success === true) {
+					// everythign went fine
+					alert('Success')
+				} else {
+					alert(result.err)
+				}
+			}
+		</script>
+	</body>
+</html>
