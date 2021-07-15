@@ -1,18 +1,15 @@
-<!DOCTYPE html>     
-<html>
+<!DOCTYPE html>
+<html lang="el-gr">
 	<head>
-		<title>Create An Account</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ιστοσελίδα Μαρίνου</title>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-		<style>
-			body {	
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				font-family: sans-serif;
-			}
-			
+    		<link rel="stylesheet" href="/style/main.css">
+		<style>	
 			form {
 				display: grid;
+				width: max-content;
 			}
 			
 			input {
@@ -21,17 +18,28 @@
 		</style>
 	</head>
 	<body>
-		<h1>Register a New Account</h1>
-
-		<form id="reg-form" method="POST" accept-charset="utf-8">
-			<input type="text" id="name" placeholder="Username &amp; Display Name"><br>
-			<input type="text" id="email" placeholder="Email (Will be verified)"><br>
-			<input type="password" id="password" placeholder="Password"><br>
-			<input type="password" id="passwordConfirmation" placeholder="Confirm password"><br>
-			<div class="g-recaptcha" data-sitekey="6Ldgay8aAAAAAJxHjhJT-ic0Mn229oGr0nm7K9u9"></div>
-			<input type="submit" value="Signup">
-		</form>
-
+		<header>
+			<h1>Η ιστοσελίδα του Μαρίνου</h1>
+			<nav>
+				<a href="/">Αρχική</a>
+				<a href="/about">Σχετικά</a>
+				<a href="/portfolio">Φωτογραφίες</a>
+				<a href="/contact">Επικοινωνία</a>
+			</nav>
+		</header>
+		
+		<div class="content">
+			<h2>Create An Account</h2>
+			<form id="reg-form" method="POST" accept-charset="utf-8">
+				<input type="text" id="name" placeholder="Username &amp; Display Name"><br>
+				<input type="text" id="email" placeholder="Email (Will be verified)"><br>
+				<input type="password" id="password" placeholder="Password"><br>
+				<input type="password" id="passwordConfirmation" placeholder="Confirm password"><br>
+				<div class="g-recaptcha" data-sitekey="6Ldgay8aAAAAAJxHjhJT-ic0Mn229oGr0nm7K9u9"></div>
+				<input type="submit" value="Signup">
+			</form>
+		</div>
+		
 		<script>
 			const form = document.getElementById('reg-form')
 			form.addEventListener('submit', registerUser)
