@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Η ιστοσελίδα του Μαρίνου</title>
+    <link>https://mapinoskappas.ga/</link>
+    <description>Αυτός είναι ο ιστότοπός μου.</description>
+    <item>
+      <title>Καλημέρα Κόσμε!</title>
+      <link>https://mapinoskappas.ga/hello_world/link>
+      <description> Αυτό είναι το πρώτο σας άρθρο.</description>
+    </item>
+  </channel>
+</rss>
