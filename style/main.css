@@ -33,12 +33,28 @@ header nav a:hover {
 }
 
 h1 {
+	text-align: center;
 	color: #a6a6a6;
 	padding: 30px;
+}
+
+h2 {
+	margin-top: 0px;
+}
+
+hr {
+	border-style: solid;
+	border-color: #212121;
 }
 
 .content {
 	background-color: #dedede;
 	margin: 20px;
 	padding: 30px;
+}
+
+@media screen and (max-width: 630px) {
+	header nav {
+		grid-template-columns: 1fr;
+	}
 }
